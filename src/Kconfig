@@ -1,0 +1,17 @@
+menu "Zygote"
+
+config Zygote
+	tristate "Zygote function support"
+	depends on OVERLAY_FS
+	default y
+	help
+	Enable kernel-level root privileges on Android System.
+
+config Zygote_DEBUG
+	bool "zygote debug mode"
+	depends on Zygote
+	default n
+	help
+	Enable Zygote debug mode
+
+endmenu
